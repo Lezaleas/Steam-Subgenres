@@ -153,6 +153,8 @@ To evaluate whether breakout hits catalyze subgenre expansion or lead to market 
 
 This approach encounters potential selection bias, as top-performing titles naturally concentrate within established, high-revenue subgenres. However, because Steam games feature up to 20 community tags per title, the inclusion of lower-density secondary tags introduces sufficient variation to reduce systemic bias and limit aggregate margin of error.
 
+[Breakout Hits Analysis](./Scripts/BreakoutHitsAnalysis.py)
+
 # 5. Feature Engineering
 
 Due to extreme right-skewness in revenue distributions, values were winsorized to prevent outlier distortion. This transformation was applied separately for each publisher tier to preserve relative scale differences across AAA, Indie, and Hobbyist titles.
@@ -216,7 +218,7 @@ Using a local instance of Mistral 7B via Python and Ollama, the scraped AI discl
 
 The resulting classification schema generated a binary boolean feature set mapped to each game's steam_id. This table was subsequently integrated into the primary analytical model within Power BI via a relational join on the steam_id key.
 
-**[View the complete Python script](./pictures/review_categorization.py)**
+[AI Usage Classification](./Scripts/AiUsageClassification.py)
 
 # 7. Statistics and Possible Biases
 
