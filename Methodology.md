@@ -2,6 +2,12 @@
 
 # 1. Exploratory Pre-Analysis and Goal Setting
 
+A core objective of this study was to determine whether breakout hits serve as causal pioneers that establish new subgenres, or if they act as catalytic inflection points capitalizing on pre-existing latent demand within the market.
+With the data indicating that breakout hits capitalize on existing demand rather than creating it, the analysis shifted to systematically identifying high-grossing subgenres across the platform.
+
+linktothesubredditthreadhere
+On the other hand, indie and solo developers have expressed widespread skepticism regarding generative AI integration, citing concerns around store compliance penalties, player backlash, and brand risk. Consequently, an empirical study was conducted to examine the presence of AI disclosures on Steam storefronts and assess its correlation with title profitability and sales performance.
+
 # 2. Data Gathering
 
 Publisher-level attributes were retrieved using the Gamalytic API via an automated collection script.
