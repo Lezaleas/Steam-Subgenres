@@ -1,14 +1,14 @@
 # Technical Methodology
 
-# 1. Exploratory Pre-Analysis and Goal Setting
+# 1. Objective
 
 A core objective of this study was to determine whether breakout hits serve as causal pioneers that establish new subgenres, or if they act as catalytic inflection points capitalizing on pre-existing latent demand within the market.
 With the data indicating that breakout hits capitalize on existing demand rather than creating it, the analysis shifted to systematically identifying high-grossing subgenres across the platform.
 
 linktothesubredditthreadhere
-Indie and solo developers have expressed widespread skepticism regarding generative AI integration, citing concerns around store compliance penalties, player backlash, and brand risk. Consequently, an empirical study was conducted to examine the presence of AI disclosures on Steam storefronts and assess its correlation with title profitability and sales performance.
+Indie and solo developers have expressed widespread skepticism regarding generative AI integration, citing concerns player backlash, and brand risk. Consequently, an empirical study was conducted to examine the presence of AI disclosures on Steam storefronts and assess its correlation with title profitability and sales performance.
 
-# 2. Data Gathering
+# 2. Data Collection
 
 Publisher-level attributes were retrieved using the Gamalytic API via an automated collection script.
 This dataset includes primary publisher identifiers, standardized tier classifications (AAA, Indie, Hobbyist), base pricing, and estimated unit sales.
@@ -23,7 +23,7 @@ This dataset captures daily snapshots of crowdsourced community tags and subgenr
 
 ![Data Structure](pictures/data_structure.webp)
 
-# 3. Data Cleaning & Preparation
+# 3. Data Cleaning & Preprocessing
 
 In the steam games dataset, titles with a price of $0 were excluded from the dataset, as free-to-play games utilize fundamentally distinct monetization models.
 
@@ -68,7 +68,7 @@ WHERE ctid IN (
                 PARTITION BY steam_id
                 ORDER BY POSITION(publisher IN publishers)
             ) AS rn
-        FROM game.games
+        FROM game.gamalytic
     ) x
     WHERE rn > 1
 );
@@ -77,13 +77,129 @@ WHERE ctid IN (
 Because string-matching via POSITION() occasionally introduced collision errors when a publisher name was entirely contained within another string, a secondary audit was performed. Ten affected edge cases were manually  corrected to guarantee the accuracy of the primary publisher assignment using the following inspection query:
 
 ```sql
-SELECT steam_id, publisher, publishers FROM game.games
+SELECT steam_id, publisher, publishers FROM game.gamalytic
 WHERE NOT ( publishers = publisher OR LEFT(publishers, LENGTH(publisher) + 1) = publisher || ',')
 LIMIT 100;
 ```
 
+# 4. Exploratory Data Analysis
 
-# 5. AI disclosure Categorization Using an LLM in Python
+Games were partitioned and ranked by tier and release year, establishing relative performance benchmarks to identify outlier titles in subsequent analyses.
+
+```sql
+WITH unique_games AS (
+    SELECT DISTINCT
+        steam_id,
+        EXTRACT(YEAR FROM release)::INTEGER AS release_year,
+        tier,
+        revenue
+    FROM game.tags
+    WHERE release IS NOT NULL
+      AND revenue IS NOT NULL
+),
+ranked_games AS (
+    SELECT
+        steam_id,
+        release_year,
+        tier,
+        RANK() OVER (
+            PARTITION BY release_year, tier
+            ORDER BY revenue DESC
+        ) AS game_rank
+    FROM unique_games
+)
+UPDATE game.tags AS t
+SET revenue_rank = r.game_rank
+FROM ranked_games AS r
+WHERE t.steam_id = r.steam_id
+  AND EXTRACT(YEAR FROM t.release)::INTEGER = r.release_year
+  AND t.tier = r.tier;
+```
+
+Additionally, a summary reference table containing mean revenue per tier and release year was compiled to facilitate revenue normalization during exploratory analysis.
+
+```sql
+WITH unique_games AS (
+    SELECT DISTINCT
+        steam_id,
+        release,
+        tier,
+        revenue
+    FROM game.tags
+    WHERE release IS NOT NULL
+      AND revenue IS NOT NULL
+)
+SELECT
+    EXTRACT(YEAR FROM release)::INTEGER AS release_year,
+    tier,
+    round(AVG(revenue)) AS avg_revenue,
+    COUNT(*) AS game_count
+FROM unique_games
+where EXTRACT(YEAR FROM release) >= 2014
+GROUP BY
+    EXTRACT(YEAR FROM release),
+    tier
+ORDER by
+	tier,
+    release_year;
+```
+
+# 5. Feature Engineering
+
+Due to extreme right-skewness in revenue distributions, values were winsorized to prevent outlier distortion. This transformation was applied separately for each publisher tier to preserve relative scale differences across AAA, Indie, and Hobbyist titles.
+
+```sql
+UPDATE game.tags AS t
+SET winsorized_revenue = LEAST(
+    t.revenue,
+    p.p95_revenue
+)
+FROM (
+    SELECT
+        tier,
+        PERCENTILE_CONT(0.95)
+            WITHIN GROUP (ORDER BY revenue) AS p95_revenue
+    FROM (
+        SELECT DISTINCT
+            tier,
+            steam_id,
+            revenue
+        FROM game.tags
+        WHERE revenue IS NOT NULL
+    ) games
+    GROUP BY tier
+) p
+WHERE t.tier = p.tier
+  AND t.revenue IS NOT NULL;
+```
+
+Additionally, winsorized revenue was normalized within its respective tier to establish balanced comparative metrics across market segments.
+
+```
+WITH game_data AS (
+    SELECT DISTINCT
+        steam_id,
+        tier,
+        winsorized_revenue
+    FROM game.tags
+    WHERE winsorized_revenue IS NOT NULL
+),
+tier_avg AS (
+    SELECT
+        tier,
+        AVG(winsorized_revenue) AS avg_revenue
+    FROM game_data
+    GROUP BY tier
+)
+UPDATE game.tags t
+SET normalized_revenue =
+    round(t.winsorized_revenue::NUMERIC / a.avg_revenue, 4)
+FROM tier_avg a
+WHERE t.tier = a.tier
+  AND t.winsorized_revenue IS NOT NULL;
+```sql
+
+# 6. AI disclosure Categorization Using an LLM in Python
 
 Using a local instance of Mistral 7B via Python and Ollama, the scraped AI disclosure texts were categorized to evaluate whether generative AI was utilized across four distinct vectors: visuals, localization, code, and audio.
 The resulting classification schema generated a binary boolean feature set mapped to each game's steam_id. This table was subsequently integrated into the primary analytical model within Power BI via a relational join on the steam_id key.
@@ -94,34 +210,7 @@ The resulting classification schema generated a binary boolean feature set mappe
 
 # 6. Final Data Preparations
 
-For brevity, the following chapters focus on the processing and analysis of positive messages. The negative messages underwent the same general processing pipeline.
 
-The positive messages were joined to the main orders table using order_id as the linking key. Integrity checks were performed after the joins to verify that the relationships behaved as expected and that no orders were left without an assigned message category:
-```sql
-UPDATE public.orders o
-SET pos_message = p.issue_category
-FROM public.pos_messages p
-WHERE p.order_id = o.order_id;
-```
-
-The original message categories were consolidated into broader analytical categories to reduce fragmentation and improve interpretability. The mapping was performed in SQL as follows:
-```sql
-UPDATE public.orders
-SET pos_message = CASE
-    WHEN issue_category LIKE 'RECOMMEN%' THEN 'Unspecified'
-    WHEN issue_category LIKE 'SKIPPED' THEN 'Unspecified'
-    WHEN issue_category LIKE 'OTHER' THEN 'Unspecified'
-    WHEN issue_category LIKE '%PRICE%' THEN 'Value/Price'
-    WHEN issue_category LIKE '%VALUE%' THEN 'Value/Price'
-    WHEN issue_category LIKE '%SERVICE%' THEN 'Easy/Good Service'
-    WHEN issue_category LIKE '%PURCHASE%' THEN 'Easy/Good Service'
-    WHEN issue_category LIKE '%PRODUCT%' THEN 'Product Quality'
-    WHEN issue_category LIKE '%PACKAGE%' THEN 'Product Quality'
-    WHEN issue_category LIKE '%DELIVERY%' THEN 'Good Delivery'
-    ELSE pos_message
-END;
-
-```
 
 # 7. Statistics and Possible Biases
 
