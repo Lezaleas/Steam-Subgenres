@@ -27,7 +27,32 @@ This dataset captures daily snapshots of crowdsourced community tags and subgenr
 
 In the steam games dataset, titles with a price of $0 were excluded from the dataset, as free-to-play games utilize fundamentally distinct monetization models.
 
-Due to inconsistent data types within the subgenre column—comprising both comma-separated values and JSON strings—all entries were standardized into uniform strings through the following script:
+Due to inconsistent data types within the subgenre column—comprising both comma-separated values and JSON strings—all entries were standardized into uniform strings through the following query:
+
+```sql
+-- json to stringified array
+UPDATE game.steam
+SET tags = (
+    SELECT jsonb_agg(key ORDER BY ordinal)
+    FROM (
+        SELECT key, row_number() OVER () AS ordinal
+        FROM jsonb_object_keys(tags::jsonb) AS t(key)
+    ) AS keys
+)::text
+WHERE tags IS NOT NULL
+  AND jsonb_typeof(tags::jsonb) = 'object';
+```
+
+```sql
+-- stringified array to string
+UPDATE game.steam
+SET tags = (
+    SELECT string_agg(tag, ', ')
+    FROM jsonb_array_elements_text(tags::jsonb) AS t(tag)
+)
+WHERE tags IS NOT NULL
+  AND TRIM(tags) <> '';
+```
 
 The Gamalytic dataset contained multiple entries for multi-publisher titles, thus records were filtered to preserve a single unique publisher per game.
 The dataset natively lists publishers in descending order of importance, the first-listed entity was retained as the primary publisher during deduplication:
