@@ -227,7 +227,7 @@ Due to the remaining variance after winsorization and normalization (Î¼ = 1.0, Ï
 
 Review counts were normalized within their respective release years and publisher tiers to control for macro-market expansion and facilitate direct year-over-year genre comparisons. To smooth temporal volatility and mitigate annual noise in longitudinal charts, 3-year rolling averages were applied. Equivalent DAX measures were utilized for revenue and copies sold metrics.
 
-```
+```dax
 N Review Score = 
 DIVIDE(
     [W Review Score],
@@ -244,7 +244,7 @@ DIVIDE(
 )
 ```
 
-```
+```dax
 3YR Review Score = 
 AVERAGEX(
     DATESINPERIOD(
