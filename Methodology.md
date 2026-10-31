@@ -25,8 +25,6 @@ The raw text of each disclosure was preserved to perform NLP classification via 
 Game-level genre taxonomies were integrated from a continuously updated Steam games dataset.
 This dataset captures daily snapshots of crowdsourced community tags and subgenre classifications associated with each title.
 
-![Data Structure](pictures/data_structure.webp)
-
 # 3. Data Cleaning & Preprocessing
 
 In the steam games dataset, titles with a price of $0 were excluded from the dataset, as free-to-play games utilize fundamentally distinct monetization models.
@@ -209,6 +207,8 @@ FROM tier_avg a
 WHERE t.tier = a.tier
   AND t.winsorized_revenue IS NOT NULL;
 ```
+
+![Data Structure](pictures/DataStructure.webp)
 
 # 6. AI Disclosure Categorization Using an LLM in Python
 
