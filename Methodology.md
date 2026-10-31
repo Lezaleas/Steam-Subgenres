@@ -208,7 +208,7 @@ WHERE t.tier = a.tier
   AND t.winsorized_revenue IS NOT NULL;
 ```
 
-![Data Structure](pictures/DataStructure.webp)
+![Data Structure](Pictures/DataStructure.webp)
 
 # 6. AI Disclosure Categorization Using an LLM in Python
 
