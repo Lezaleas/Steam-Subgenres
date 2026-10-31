@@ -11,14 +11,15 @@ Indie and solo developers have expressed skepticism regarding generative AI inte
 
 # 2. Data Collection
 
+[Gamalytic API](./Scripts/GamalyticAPI.py)
 Publisher-level attributes were retrieved using the Gamalytic API via an automated collection script.
 This dataset includes primary publisher identifiers and standardized publisher tier classifications (AAA, AA, Indie, Hobbyist).
 
-pythongscriptlinkhere
+[Steam Web Scraping](./Scripts/SteamWebScrape.py)
 To document developer disclosures regarding artificial intelligence, target HTML elements were extracted from individual Steam store pages using custom web scraping scripts.
 The raw text of each disclosure was preserved to perform NLP classification via Large Language Models.
 
-datasetlinkhere
+[Steam Games Dataset](https://www.kaggle.com/datasets/hubertsidorowicz/steam-games-dataset-daily-updates)
 Game-level genre taxonomies were integrated from a continuously updated Steam games dataset.
 This dataset captures daily snapshots of crowdsourced community tags and subgenre classifications associated with each title.
 
