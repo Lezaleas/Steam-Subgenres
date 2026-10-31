@@ -29,7 +29,7 @@ In the steam games dataset, titles with a price of $0 were excluded from the dat
 
 Due to inconsistent data types within the subgenre column—comprising both comma-separated values and JSON strings—all entries were standardized into uniform strings through the following script:
 
-Because the Gamalytic dataset contained multiple entries for multi-publisher titles, records were filtered to preserve a single unique publisher per game.
+The Gamalytic dataset contained multiple entries for multi-publisher titles, thus records were filtered to preserve a single unique publisher per game.
 The dataset natively lists publishers in descending order of importance, the first-listed entity was retained as the primary publisher during deduplication:
 
 ```sql
