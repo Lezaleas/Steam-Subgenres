@@ -12,7 +12,7 @@ Indie and solo developers have expressed skepticism regarding generative AI inte
 # 2. Data Collection
 
 Publisher-level attributes were retrieved using the Gamalytic API via an automated collection script.
-This dataset includes primary publisher identifiers and standardized tier classifications (AAA, Indie, Hobbyist).
+This dataset includes primary publisher identifiers and standardized tier classifications (AAA, AA, Indie, Hobbyist).
 
 pythongscriptlinkhere
 To document developer disclosures regarding artificial intelligence, target HTML elements were extracted from individual Steam store pages using custom web scraping scripts.
