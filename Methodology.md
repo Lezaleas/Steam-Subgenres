@@ -144,6 +144,12 @@ ORDER by
     release_year;
 ```
 
+To evaluate whether breakout hits catalyze subgenre expansion or lead to market saturation, a temporal impact analysis was conducted across high-performing titles:
+* Cohort Identification: A top-performing cohort of K games was selected based on tier-normalized revenue rankings.
+* Temporal Windowing: For each breakout title, associated subgenre entries within a multi-year temporal window relative to the breakout release date (t = 0) were aggregated. Revenues and temporal distances were tallied to calculate trajectory averages.
+* Control Group Baseline: To isolate genuine subgenre trajectory shifts from broader platform expansion, a randomized baseline control group was subtracted from the aggregate results.
+This approach encounters potential selection bias, as top-performing titles naturally concentrate within established, high-revenue subgenres. However, because Steam games feature up to 20 community tags per title, the inclusion of lower-density secondary tags introduces sufficient variation to reduce systemic bias and limit aggregate margin of error.
+
 # 5. Feature Engineering
 
 Due to extreme right-skewness in revenue distributions, values were winsorized to prevent outlier distortion. This transformation was applied separately for each publisher tier to preserve relative scale differences across AAA, Indie, and Hobbyist titles.
@@ -197,7 +203,7 @@ SET normalized_revenue =
 FROM tier_avg a
 WHERE t.tier = a.tier
   AND t.winsorized_revenue IS NOT NULL;
-```sql
+```
 
 # 6. AI disclosure Categorization Using an LLM in Python
 
