@@ -15,7 +15,7 @@ This dataset includes primary publisher identifiers, standardized tier classific
 
 pythongscriptlinkhere
 To document developer disclosures regarding artificial intelligence, target HTML elements were extracted from individual Steam store pages using custom web scraping scripts.
-The raw text of each disclosure was preserved to perform NLP classification and semantic categorization via Large Language Models..
+The raw text of each disclosure was preserved to perform NLP classification via Large Language Models.
 
 datasetlinkhere
 Game-level genre taxonomies were integrated from a continuously updated Steam games dataset.
