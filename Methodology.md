@@ -6,7 +6,7 @@ A core objective of this study was to determine whether breakout hits serve as c
 With the data indicating that breakout hits capitalize on existing demand rather than creating it, the analysis shifted to systematically identifying high-grossing subgenres across the platform.
 
 linktothesubredditthreadhere
-On the other hand, indie and solo developers have expressed widespread skepticism regarding generative AI integration, citing concerns around store compliance penalties, player backlash, and brand risk. Consequently, an empirical study was conducted to examine the presence of AI disclosures on Steam storefronts and assess its correlation with title profitability and sales performance.
+Indie and solo developers have expressed widespread skepticism regarding generative AI integration, citing concerns around store compliance penalties, player backlash, and brand risk. Consequently, an empirical study was conducted to examine the presence of AI disclosures on Steam storefronts and assess its correlation with title profitability and sales performance.
 
 # 2. Data Gathering
 
@@ -27,21 +27,41 @@ This dataset captures daily snapshots of crowdsourced community tags and subgenr
 
 In the steam games dataset, titles with a price of $0 were excluded from the dataset, as free-to-play games utilize fundamentally distinct monetization models.
 
-The column for subgenres 
+Due to inconsistent data types within the subgenre column—comprising both comma-separated values and JSON strings—all entries were standardized into uniform strings through the following script:
 
-# 5. Review Categorization Using an LLM in Python
+Because the Gamalytic dataset contained multiple entries for multi-publisher titles, records were filtered to preserve a single unique publisher per game.
+The dataset natively lists publishers in descending order of importance, the first-listed entity was retained as the primary publisher during deduplication:
 
-**Ollama:** About 30,000 reviews contained messages written in Brazilian Portuguese. A locally hosted LLM, accessed through Ollama, was used to classify these messages into 12 distinct categories, such as delivery not received and easy service, allowing qualitative review text to be transformed into structured data for quantitative analysis.
+```sql
+DELETE FROM game.games
+WHERE ctid IN (
+    SELECT ctid
+    FROM (
+        SELECT
+            ctid,
+            ROW_NUMBER() OVER (
+                PARTITION BY steam_id
+                ORDER BY POSITION(publisher IN publishers)
+            ) AS rn
+        FROM game.games
+    ) x
+    WHERE rn > 1
+);
+```
 
-The category taxonomy was developed manually through iterative trial runs. Initial classifications were manually inspected and the categories were progressively refined until they provided a useful balance between specificity and consistency.
+Because string-matching via POSITION() occasionally introduced collision errors when a publisher name was entirely contained within another string, a secondary audit was performed. Ten affected edge cases were manually  corrected to guarantee the accuracy of the primary publisher assignment using the following inspection query:
 
-The initial model selected for classification produced accurate results, but its computational requirements would have resulted in an estimated processing time of approximately 20 days. A compromise was found with **Qwen2.5:3B**, which provided sufficiently high classification precision while being substantially faster and clearing the task in 2 days. Classification quality was manually checked on trial outputs before processing the full dataset.
+```sql
+SELECT steam_id, publisher, publishers FROM game.games
+WHERE NOT ( publishers = publisher OR LEFT(publishers, LENGTH(publisher) + 1) = publisher || ',')
+LIMIT 100;
+```
 
-**Python:** Because positive and negative reviews required different classification taxonomies, two filtered copies of the reviews table were created in PostgreSQL, containing only reviews within the respective score ranges. These tables were then exported to CSV and processed in Python. The script handled prompting the LLM with each review message, extracting the resulting category, and periodically saving checkpoints so that processing could be resumed without losing completed classifications.
 
-The Python script initially also validated the model's output against the predefined category list, since the model occasionally generated categories outside the intended taxonomy. This validation step was ultimately removed after it became apparent that these occasional category variations could be more effectively consolidated into the final taxonomy in SQL.
+# 5. AI disclosure Categorization Using an LLM in Python
 
-The resulting classified datasets were saved as two CSV files, containing the review messages alongside their assigned categories. These files were then imported back into PostgreSQL using pgAdmin.
+Using a local instance of Mistral 7B via Python and Ollama, the scraped AI disclosure texts were categorized to evaluate whether generative AI was utilized across four distinct vectors: visuals, localization, code, and audio.
+The resulting classification schema generated a binary boolean feature set mapped to each game's steam_id. This table was subsequently integrated into the primary analytical model within Power BI via a relational join on the steam_id key.
 
 **[View the complete Python script](./pictures/review_categorization.py)**
 
