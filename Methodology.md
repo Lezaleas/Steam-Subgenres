@@ -13,6 +13,7 @@ Indie and solo developers have expressed skepticism regarding generative AI inte
 
 # 2. Data Collection
 
+![Python](https://img.shields.io/badge/Python-3D8DC?style=for-the-badge&logo=python&logoColor=white)
 [Gamalytic API](./Scripts/GamalyticAPI.py)
 Publisher-level attributes were retrieved using the Gamalytic API via an automated collection script.
 This dataset includes primary publisher identifiers and standardized publisher tier classifications (AAA, AA, Indie, Hobbyist).
