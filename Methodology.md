@@ -60,7 +60,7 @@ The Gamalytic dataset contained multiple entries for multi-publisher titles, thu
 The dataset natively lists publishers in descending order of importance, the first-listed entity was retained as the primary publisher during deduplication:
 
 ```sql
-DELETE FROM game.games
+DELETE FROM game.gamalytic
 WHERE ctid IN (
     SELECT ctid
     FROM (
