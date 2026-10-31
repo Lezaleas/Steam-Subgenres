@@ -147,7 +147,7 @@ ORDER by
 
 To evaluate whether breakout hits catalyze subgenre expansion or lead to market saturation, a temporal impact analysis was conducted across high-performing titles:
 * Cohort Identification: A top-performing cohort of K games was selected based on tier-normalized revenue rankings.
-* Temporal Windowing: For each breakout title, associated subgenre entries within a multi-year temporal window relative to the breakout release date (t = 0) were aggregated. Revenues and temporal distances were tallied to calculate trajectory averages.
+* Temporal Windowing: For each breakout title, associated subgenre entries within a multi-year temporal window relative to the breakout´s release date were aggregated. Revenues and temporal distances were tallied to calculate trajectory averages.
 * Control Group Baseline: To isolate genuine subgenre trajectory shifts from broader platform expansion, a randomized baseline control group was subtracted from the aggregate results.
 
 This approach encounters potential selection bias, as top-performing titles naturally concentrate within established, high-revenue subgenres. However, because Steam games feature up to 20 community tags per title, the inclusion of lower-density secondary tags introduces sufficient variation to reduce systemic bias and limit aggregate margin of error.
