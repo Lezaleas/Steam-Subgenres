@@ -182,7 +182,7 @@ WHERE t.tier = p.tier
 
 Additionally, winsorized revenue was normalized within its respective tier to establish balanced comparative metrics across market segments.
 
-```
+```sql
 WITH game_data AS (
     SELECT DISTINCT
         steam_id,
