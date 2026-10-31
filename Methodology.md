@@ -207,7 +207,7 @@ WHERE t.tier = a.tier
   AND t.winsorized_revenue IS NOT NULL;
 ```
 
-# 6. AI disclosure Categorization Using an LLM in Python
+# 6. AI Disclosure Categorization Using an LLM in Python
 
 Using a local instance of Mistral 7B via Python and Ollama, the scraped AI disclosure texts were categorized to evaluate whether generative AI was utilized across four distinct vectors: visuals, localization, code, and audio.
 
