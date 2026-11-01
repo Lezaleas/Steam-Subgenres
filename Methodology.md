@@ -157,7 +157,7 @@ This approach encounters potential selection bias, as top-performing titles natu
 
 # 5. Feature Engineering
 
-Due to extreme right-skewness in revenue distributions, values were winsorized to prevent outlier distortion. This transformation was applied separately for each publisher tier to preserve relative scale differences across AAA, Indie, and Hobbyist titles.
+Because video game revenue distributions exhibit extreme right-skewness, values were winsorized to cap extreme outliers. Applying this transformation independently across each publisher tier preserved relative scale differences while neutralizing massive spikes—making it safe to use standard averages to represent typical market performance without distortion, rather than having to rely on medians or other metrics that obscure total volume.
 
 ```sql
 UPDATE game.tags AS t
