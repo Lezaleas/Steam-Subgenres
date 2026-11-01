@@ -6,7 +6,6 @@ A core objective of this study was to determine whether breakout hits serve as c
 
 With the data indicating that breakout hits capitalize on existing demand rather than creating it, the analysis shifted to systematically identifying high-grossing subgenres across the platform.
 
-[Reddit Post](https://www.reddit.com/r/gamedev/comments/1x1brtt/which_steam_data_would_you_want_to_see_before/)
 Indie and solo developers have expressed skepticism regarding generative AI integration. Consequently, an empirical study was conducted to examine the presence of AI disclosures on Steam storefronts and assess its correlation with title profitability and sales performance across genres.
 
 ![Summary](Pictures/Summary.jpg)
