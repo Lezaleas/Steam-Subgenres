@@ -25,4 +25,4 @@ This study was commissioned to evaluate market opportunities for an indie game s
 
 ### [Technical Methodology Report →](Methodology.md)
 
-![Methodology FlowChart](Pictures/Summary.png)
+![Methodology FlowChart](Pictures/Summary.jpg)
