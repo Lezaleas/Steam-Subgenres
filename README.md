@@ -8,7 +8,21 @@ This study was commissioned to evaluate market opportunities for an indie game s
 2. Genre Viability: Which subgenres generate the highest financial returns?
 - Complex simulation and system-heavy games generate the highest commercial returns for indies. example tags are resource management, base building, economy
 
-3. AI Disclosures: How does public disclosure of Generative AI usage impact sales, customer sentiment, and user reviews?
+3. AI Usage: How does public disclosure of Generative AI usage impact sales, customer sentiment, and user reviews?
 - Consumer stigma around AI usage shrinks significantly as studio scale decreases
 
+**1. Trend Drivers**
 
+- Rather than inventing entirely new categories, breakout hits succeed by refining mechanics within underserved markets.
+- Studios should mitigate financial risk by directing R&D resources toward established gameplay loops in high-demand, low-competition niches rather than burning capital on unproven concepts.
+- To guide future development and market positioning, we must examine which genres yield the strongest financial performance.
+
+**2. Genre Viability**
+
+**3. AI Usage**
+
+**Methodology**
+
+### [Technical Methodology Report →](Methodology.md)
+
+![Methodology FlowChart](Pictures/Summary.png)
