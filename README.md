@@ -18,6 +18,9 @@ This study was commissioned to evaluate market opportunities for an indie game s
 
 **2. Genre Viability**
 
+For AAA/AA publishers, the games that perform best are typically "immersive experience" types of games. examples of well performing tags are first-person, open-world, exploration.
+For Indie publishers, best performers are complex simulations and system-heavy games
+
 **3. AI Usage**
 
 **Methodology**
