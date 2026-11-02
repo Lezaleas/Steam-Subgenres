@@ -8,7 +8,7 @@ This project includes an interactive Power BI dashboard designed for exploring t
 
 # 1. Trend Drivers
 
-
+Analyzing subgenre dynamics before, during, and after the launch of a major breakout title reveals the following:
 - Rather than inventing entirely new categories, breakout hits succeed by refining mechanics within underserved markets.
 - Studios should mitigate financial risk by directing R&D resources toward established gameplay loops in high-demand, low-competition niches rather than burning capital on unproven concepts.
 - To guide future development and market positioning, we must examine which genres yield the strongest financial performance.
