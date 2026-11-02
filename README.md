@@ -8,13 +8,13 @@ This study was commissioned to evaluate market opportunities for an indie game s
 
 3. AI Usage: How does public disclosure of Generative AI usage impact sales, customer sentiment, and user reviews?
 
-This project includes an interactive Power BI dashboard designed for exploring the data and discovering promising game genres. The findings presented in this README are examples of insights identified during the analysis, not an exhaustive list. Readers are encouraged to interact with the dashboard, experiment with different combinations of tags, and explore potential market opportunities for themselves.                                                                                                                            
-**[Download the Interactive Power BI Dashboard ↓](https://github.com/Lezaleas/Steam-Subgenres/raw/refs/heads/main/Pictures/steam.pbix)**
-
 **Executive summary**
 Indie games built around complex, system-driven mechanics represent an attractive market segment.
 Base Building, Resource Management, Economy, and Deckbuilding consistently appear among high-performing categories.
 Smaller studios may benefit from competing through mechanical depth and replayability rather than production scale.
+
+This project includes an interactive Power BI dashboard designed for exploring the data and discovering promising game genres. The findings presented in this README are examples of insights identified during the analysis, not an exhaustive list. Readers are encouraged to interact with the dashboard, experiment with different combinations of tags, and explore potential market opportunities for themselves.                                                                                                                            
+**[Download the Interactive Power BI Dashboard ↓](https://github.com/Lezaleas/Steam-Subgenres/raw/refs/heads/main/Pictures/steam.pbix)**
 
 # 1. Trend Drivers
 
