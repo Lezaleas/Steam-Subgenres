@@ -5,10 +5,8 @@ This study was commissioned to evaluate market opportunities for an indie game s
 1. Trend Drivers: Do breakout hit titles create new demand within their genre, or are they capitalizing on pre-existing unmet demand?
 
 2. Genre Viability: Which subgenres generate the highest financial returns?
-- Complex simulation and system-heavy games generate the highest commercial returns for indies. example tags are resource management, base building, economy
 
 3. AI Usage: How does public disclosure of Generative AI usage impact sales, customer sentiment, and user reviews?
-- Consumer stigma around AI usage shrinks significantly as studio scale decreases
 
 This project includes an interactive Power BI dashboard designed for exploring the data and discovering promising game genres. The findings presented in this README are examples of insights identified during the analysis, not an exhaustive list. Readers are encouraged to interact with the dashboard, experiment with different combinations of tags, and explore potential market opportunities for themselves.
 
