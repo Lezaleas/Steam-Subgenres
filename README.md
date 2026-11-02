@@ -25,13 +25,14 @@ Analyzing subgenre dynamics before, during, and after the launch of a major brea
 
 Indie studios occupy an interesting middle ground: they generally lack the resources to create enormous worlds filled with handcrafted content, but have the capacity to develop highly polished strategic and mechanical systems for players to engage with. This makes games built around complex mechanics or system-driven engagement particularly well-suited to their strengths.
 
-**What are Crafty Buildy Simulation Strategy games?**
+<details>
+<summary><b>What are "Crafty Buildy Simulation Strategy" games? (Click to expand)</b></summary>
 
 These are games centered around managing resources and developing complex systems through strategic decision-making. They typically give players considerable freedom to interact with a simulation, experiment with different approaches, and gradually build increasingly sophisticated systems. Much of their appeal comes from the satisfaction of planning and optimization.
 
 The term was popularized by the following article: [What Are Crafty Buildy Strategy Simulation Games?](https://howtomarketagame.com/2024/12/27/what-are-crafty-buildy-strategy-simulation-games/)
 
-![Subgenres](Pictures/SubgenresPBI.png)
+</details>
 
 # 3. AI Usage
 
