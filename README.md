@@ -9,7 +9,7 @@ This study was commissioned to evaluate market opportunities for an indie game s
 3. AI Usage: How does public disclosure of Generative AI usage impact sales, customer sentiment, and user reviews?
 
 This project includes an interactive Power BI dashboard designed for exploring the data and discovering promising game genres. The findings presented in this README are examples of insights identified during the analysis, not an exhaustive list. Readers are encouraged to interact with the dashboard, experiment with different combinations of tags, and explore potential market opportunities for themselves.
-### [Download the Interactive Power BI Dashboard ↓](https://raw.githubusercontent.com/Lezaleas/Steam-Subgenres/Pictures/steam.pbix)
+### [Download the Interactive Power BI Dashboard ↓](https://raw.githubusercontent.com/Lezaleas/Steam-Subgenres/blob/main/Pictures/steam.pbix)
 
 **1. Trend Drivers**
 
