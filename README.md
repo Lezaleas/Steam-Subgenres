@@ -24,7 +24,7 @@ Solo developers: Personal experiences and interesting niche concepts tend to per
 
 Indie studios: The highest-revenue tags tend to belong to a category colloquially known as *Crafty Buildy Simulation Strategy* games. Examples include *Base Building, Economy, Resource Management,* and *Deckbuilding*. Other consistently strong categories include games with deep and engaging mechanics, such as *RTS, Souls-like,* and *Survival*.
 
-Indie studios occupy an interesting middle ground: they generally lack the resources to create enormous worlds filled with handcrafted content, but have the capacity to develop highly polished strategic and mechanical systems for players to engage with. This makes games built around complex mechanics, resource management, and player-driven progression particularly well-suited to their strengths.
+Indie studios occupy an interesting middle ground: they generally lack the resources to create enormous worlds filled with handcrafted content, but have the capacity to develop highly polished strategic and mechanical systems for players to engage with. This makes games built around complex mechanics or system-driven engagement particularly well-suited to their strengths.
 
 ### What are Crafty Buildy Simulation Strategy games?
 
