@@ -1,17 +1,7 @@
-<h1 align="center">Which Subgenres Perform Best on Steam?</h1>
+<h1 align="center">Which Steam Subgenres Make the Most Money for Indie Studios??</h1>
 
-This study was commissioned to evaluate market opportunities for an indie game studio assessing its product strategy and resource allocation. Choosing which projects to greenlight requires balancing market demand against operational risk. To provide actionable guidance, this report examines three core strategic questions:
-
-1. Trend Drivers: Do breakout hit titles create new demand within their genre, or are they capitalizing on pre-existing unmet demand?
-
-2. Genre Viability: Which subgenres generate the highest financial returns?
-
-3. AI Usage: How does public disclosure of Generative AI usage impact sales, customer sentiment, and user reviews?
-
-**Executive summary**
-Indie games built around complex, system-driven mechanics represent an attractive market segment.
-Base Building, Resource Management, Economy, and Deckbuilding consistently appear among high-performing categories.
-Smaller studios may benefit from competing through mechanical depth and replayability rather than production scale.
+I analyzed 150k Steam games to find where small studios can compete. **Key finding**: system-driven genres (Base Building, Resource Management, Deckbuilding) consistently outperform, because they reward mechanical depth over production budget.
+Tools: Python · SQL · Power BI · APIs · Web Scraping
 
 This project includes an interactive Power BI dashboard designed for exploring the data and discovering promising game genres. The findings presented in this README are examples of insights identified during the analysis, not an exhaustive list. Readers are encouraged to interact with the dashboard, experiment with different combinations of tags, and explore potential market opportunities for themselves.                                                                                                                            
 **[Download the Interactive Power BI Dashboard ↓](https://github.com/Lezaleas/Steam-Subgenres/raw/refs/heads/main/Pictures/steam.pbix)**
