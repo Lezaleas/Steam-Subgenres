@@ -1,4 +1,4 @@
-<h1 align="center">Which subgenres perform best in steam??</h1>
+<h1 align="center">Which Subgenres Perform Best on Steam?</h1>
 
 This study was commissioned to evaluate market opportunities for an indie game studio assessing its product strategy and resource allocation. Choosing which projects to greenlight requires balancing market demand against operational risk. To provide actionable guidance, this report examines three core strategic questions:
 
@@ -10,6 +10,11 @@ This study was commissioned to evaluate market opportunities for an indie game s
 
 This project includes an interactive Power BI dashboard designed for exploring the data and discovering promising game genres. The findings presented in this README are examples of insights identified during the analysis, not an exhaustive list. Readers are encouraged to interact with the dashboard, experiment with different combinations of tags, and explore potential market opportunities for themselves.                                                                                                                            
 **[Download the Interactive Power BI Dashboard ↓](https://github.com/Lezaleas/Steam-Subgenres/raw/refs/heads/main/Pictures/steam.pbix)**
+
+**Executive summary**
+Indie games built around complex, system-driven mechanics represent an attractive market segment.
+Base Building, Resource Management, Economy, and Deckbuilding consistently appear among high-performing categories.
+Smaller studios may benefit from competing through mechanical depth and replayability rather than production scale.
 
 # 1. Trend Drivers
 
@@ -39,11 +44,9 @@ The term was popularized by the following article: [What Are Crafty Buildy Strat
 
 # 3. AI Usage
 
-Work in progress, local AI takes weeks to process the full text dataset
+Work in progress.
 
-# 4. Insights
-
-# 5. Methodology
+# 4. Methodology
 
 ### [Technical Methodology Report →](Methodology.md)
 
