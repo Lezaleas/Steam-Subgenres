@@ -21,9 +21,11 @@ Analyzing subgenre dynamics before, during, and after the launch of a major brea
 | :--- | :--- | :--- |
 | **AAA / AA Publishers** | Focuses on immersive experiences requiring substantial investment in realistic graphics, detailed environments, and large amounts of handcrafted content. | *First-Person, Atmospheric, Exploration* |
 | **Solo Developers** | Leverages flexibility to explore riskier ideas, target passionate niche audiences, draw on specialized knowledge, and build around personal experiences or unique concepts. | *LGBTQ+, Dating Sim, Memes, Story Rich* |
-| **Indie Studios** | Focuses on systemic depth, replayability, and complex mechanical loops rather than massive open-world production scales. | *Base Building, Economy, Resource Management, Deckbuilding, RTS, Souls-like, Survival* |
+| **Indie Studios** | Focuses on systemic depth, replayability, and complex mechanical loops rather than massive open-world production scales. | *Base Building, Economy, Resource Management, Deckbuilding,* |
 
 Indie studios occupy an interesting middle ground: they generally lack the resources to create enormous worlds filled with handcrafted content, but have the capacity to develop highly polished strategic and mechanical systems for players to engage with. This makes games built around complex mechanics or system-driven engagement particularly well-suited to their strengths.
+
+The highest-revenue tags tend to belong to a category colloquially known as Crafty Buildy Simulation Strategy games. Examples include Base Building, Economy, Resource Management, and Deckbuilding. Other consistently strong categories include games with deep and engaging mechanics, such as RTS, Souls-like, and Survival.
 
 <details>
 <summary><b>What are "Crafty Buildy Simulation Strategy" games? (Click to expand)</b></summary>
