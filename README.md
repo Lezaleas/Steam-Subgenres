@@ -11,13 +11,13 @@ This study was commissioned to evaluate market opportunities for an indie game s
 This project includes an interactive Power BI dashboard designed for exploring the data and discovering promising game genres. The findings presented in this README are examples of insights identified during the analysis, not an exhaustive list. Readers are encouraged to interact with the dashboard, experiment with different combinations of tags, and explore potential market opportunities for themselves.
 ## [Download the Interactive Power BI Dashboard ↓](https://github.com/Lezaleas/Steam-Subgenres/raw/refs/heads/main/Pictures/steam.pbix)
 
-**1. Trend Drivers**
+# 1. Trend Drivers
 
 - Rather than inventing entirely new categories, breakout hits succeed by refining mechanics within underserved markets.
 - Studios should mitigate financial risk by directing R&D resources toward established gameplay loops in high-demand, low-competition niches rather than burning capital on unproven concepts.
 - To guide future development and market positioning, we must examine which genres yield the strongest financial performance.
 
-**2. Genre Viability**
+# 2. Genre Viability
 
 note: the dashboard was meant to be used interactively and it's recommended to use it to fish for strong genres
 
@@ -29,7 +29,7 @@ note: the dashboard was meant to be used interactively and it's recommended to u
 
 Indie studios occupy an interesting middle ground: they generally lack the resources to create enormous worlds filled with handcrafted content, but have the capacity to develop highly polished strategic and mechanical systems for players to engage with. This makes games built around complex mechanics or system-driven engagement particularly well-suited to their strengths.
 
-# What are Crafty Buildy Simulation Strategy games?
+**What are Crafty Buildy Simulation Strategy games?**
 
 These are games centered around managing resources and developing complex systems through strategic decision-making. They typically give players considerable freedom to interact with a simulation, experiment with different approaches, and gradually build increasingly sophisticated systems. Much of their appeal comes from the satisfaction of planning, optimization, creativity.
 
@@ -37,7 +37,7 @@ The term was popularized by the following article:
 
 [What Are Crafty Buildy Strategy Simulation Games? – How To Market A Game](https://howtomarketagame.com/2024/12/27/what-are-crafty-buildy-strategy-simulation-games/)
 
-**3. AI Usage**
+# 3. AI Usage
 
 Work in progress, local AI takes weeks to process the full text dataset
 
