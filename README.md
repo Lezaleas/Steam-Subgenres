@@ -36,7 +36,7 @@ The term was popularized by the following article:
 
 **3. AI Usage**
 
-Work in progress, local AI takes weeks to process the full dataset
+Work in progress, local AI takes weeks to process the full text dataset
 
 **Methodology**
 
