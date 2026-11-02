@@ -35,6 +35,8 @@ These are games centered around managing resources and developing complex system
 
 The term was popularized by the following article: [What Are Crafty Buildy Strategy Simulation Games?](https://howtomarketagame.com/2024/12/27/what-are-crafty-buildy-strategy-simulation-games/)
 
+![Subgenres](Pictures/SubgenresPBI.png)
+
 # 3. AI Usage
 
 Work in progress, local AI takes weeks to process the full text dataset
