@@ -19,8 +19,6 @@ This project includes an interactive Power BI dashboard designed for exploring t
 
 # 2. Genre Viability
 
-note: the dashboard was meant to be used interactively and it's recommended to use it to fish for strong genres
-
 * AAA/AA publishers: The best-performing games tend to focus on immersive experiences. Some examples of successful tags are *First-Person, Atmospheric,* and *Exploration*. These games often require substantial investment, as they rely on realistic graphics, detailed environments, and large amounts of handcrafted content to create engaging worlds.
 
 * Solo developers: Personal experiences and interesting niche concepts tend to perform particularly well. Examples include *LGBTQ+, Dating Sim, Memes,* and *Story Rich*. Solo developers can take advantage of their flexibility to explore riskier ideas, target passionate niche audiences, or draw on specialized knowledge of a particular subject.
