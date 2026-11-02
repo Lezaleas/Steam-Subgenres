@@ -10,6 +10,8 @@ This study was commissioned to evaluate market opportunities for an indie game s
 3. AI Usage: How does public disclosure of Generative AI usage impact sales, customer sentiment, and user reviews?
 - Consumer stigma around AI usage shrinks significantly as studio scale decreases
 
+This project includes an interactive Power BI dashboard designed for exploring the data and discovering promising game genres. The findings presented in this README are examples of insights identified during the analysis, not an exhaustive list. Readers are encouraged to interact with the dashboard, experiment with different combinations of tags, and explore potential market opportunities for themselves.
+
 **1. Trend Drivers**
 
 - Rather than inventing entirely new categories, breakout hits succeed by refining mechanics within underserved markets.
@@ -17,6 +19,8 @@ This study was commissioned to evaluate market opportunities for an indie game s
 - To guide future development and market positioning, we must examine which genres yield the strongest financial performance.
 
 **2. Genre Viability**
+
+note: the dashboard was meant to be used interactively and it's recommended to use it to fish for strong genres
 
 AAA/AA publishers: The best-performing games tend to focus on immersive experiences. Some examples of successful tags are *First-Person, Atmospheric,* and *Exploration*. These games often require substantial investment, as they rely on realistic graphics, detailed environments, and large amounts of handcrafted content to create engaging worlds.
 
