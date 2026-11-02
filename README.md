@@ -33,9 +33,7 @@ Indie studios occupy an interesting middle ground: they generally lack the resou
 
 These are games centered around managing resources and developing complex systems through strategic decision-making. They typically give players considerable freedom to interact with a simulation, experiment with different approaches, and gradually build increasingly sophisticated systems. Much of their appeal comes from the satisfaction of planning, optimization, creativity.
 
-The term was popularized by the following article:
-
-[What Are Crafty Buildy Strategy Simulation Games? – How To Market A Game](https://howtomarketagame.com/2024/12/27/what-are-crafty-buildy-strategy-simulation-games/)
+The term was popularized by the following article: [What Are Crafty Buildy Strategy Simulation Games?](https://howtomarketagame.com/2024/12/27/what-are-crafty-buildy-strategy-simulation-games/)
 
 # 3. AI Usage
 
