@@ -9,6 +9,7 @@ This study was commissioned to evaluate market opportunities for an indie game s
 3. AI Usage: How does public disclosure of Generative AI usage impact sales, customer sentiment, and user reviews?
 
 This project includes an interactive Power BI dashboard designed for exploring the data and discovering promising game genres. The findings presented in this README are examples of insights identified during the analysis, not an exhaustive list. Readers are encouraged to interact with the dashboard, experiment with different combinations of tags, and explore potential market opportunities for themselves.
+### [Download the Power BI Dashboard ↓](https://raw.githubusercontent.com/Lezaleas/Pictures/steam.pbix)
 
 **1. Trend Drivers**
 
@@ -20,11 +21,11 @@ This project includes an interactive Power BI dashboard designed for exploring t
 
 note: the dashboard was meant to be used interactively and it's recommended to use it to fish for strong genres
 
-AAA/AA publishers: The best-performing games tend to focus on immersive experiences. Some examples of successful tags are *First-Person, Atmospheric,* and *Exploration*. These games often require substantial investment, as they rely on realistic graphics, detailed environments, and large amounts of handcrafted content to create engaging worlds.
+* AAA/AA publishers: The best-performing games tend to focus on immersive experiences. Some examples of successful tags are *First-Person, Atmospheric,* and *Exploration*. These games often require substantial investment, as they rely on realistic graphics, detailed environments, and large amounts of handcrafted content to create engaging worlds.
 
-Solo developers: Personal experiences and interesting niche concepts tend to perform particularly well. Examples include *LGBTQ+, Dating Sim, Memes,* and *Story Rich*. Solo developers can take advantage of their flexibility to explore riskier ideas, target passionate niche audiences, or draw on specialized knowledge of a particular subject.
+* Solo developers: Personal experiences and interesting niche concepts tend to perform particularly well. Examples include *LGBTQ+, Dating Sim, Memes,* and *Story Rich*. Solo developers can take advantage of their flexibility to explore riskier ideas, target passionate niche audiences, or draw on specialized knowledge of a particular subject.
 
-Indie studios: The highest-revenue tags tend to belong to a category colloquially known as *Crafty Buildy Simulation Strategy* games. Examples include *Base Building, Economy, Resource Management,* and *Deckbuilding*. Other consistently strong categories include games with deep and engaging mechanics, such as *RTS, Souls-like,* and *Survival*.
+* Indie studios: The highest-revenue tags tend to belong to a category colloquially known as *Crafty Buildy Simulation Strategy* games. Examples include *Base Building, Economy, Resource Management,* and *Deckbuilding*. Other consistently strong categories include games with deep and engaging mechanics, such as *RTS, Souls-like,* and *Survival*.
 
 Indie studios occupy an interesting middle ground: they generally lack the resources to create enormous worlds filled with handcrafted content, but have the capacity to develop highly polished strategic and mechanical systems for players to engage with. This makes games built around complex mechanics or system-driven engagement particularly well-suited to their strengths.
 
