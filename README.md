@@ -40,7 +40,7 @@ The term was popularized by the following article: [What Are Crafty Buildy Strat
 
 # 3. AI Usage
 
-Work in progress.
+Work in progress. The study will investigate if there's a correlation between disclosed use of AI and sales.
 
 # 4. Methodology
 
