@@ -17,6 +17,8 @@ This project includes an interactive Power BI dashboard designed for exploring t
 - Studios should mitigate financial risk by directing R&D resources toward established gameplay loops in high-demand, low-competition niches rather than burning capital on unproven concepts.
 - To guide future development and market positioning, we must examine which genres yield the strongest financial performance.
 
+![Breakout Hits Dashboard](Pictures/BreakoutHitsPBI.png)
+
 # 2. Genre Viability
 
 * AAA/AA publishers: The best-performing games tend to focus on immersive experiences. Some examples of successful tags are *First-Person, Atmospheric,* and *Exploration*. These games often require substantial investment, as they rely on realistic graphics, detailed environments, and large amounts of handcrafted content to create engaging worlds.
