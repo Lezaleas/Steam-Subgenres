@@ -34,6 +34,8 @@ The term was popularized by the following article: [What Are Crafty Buildy Strat
 
 </details>
 
+![Subgenres Dashboard](Pictures/SubgenresPBI.png)
+
 # 3. AI Usage
 
 Work in progress.
