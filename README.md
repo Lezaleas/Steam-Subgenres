@@ -39,7 +39,9 @@ The term was popularized by the following article: [What Are Crafty Buildy Strat
 
 Work in progress, local AI takes weeks to process the full text dataset
 
-**Methodology**
+# 4. Insights
+
+# 5. Methodology
 
 ### [Technical Methodology Report →](Methodology.md)
 
