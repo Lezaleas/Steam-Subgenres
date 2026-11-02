@@ -2,9 +2,8 @@
 
 An Analysis of 150k Steam games to find where small studios can compete.                                                            
 **Key finding**: system-driven genres (Base Building, Resource Management, Deckbuilding) consistently outperform, because they reward mechanical depth over production budget.
-
-This project includes an interactive Power BI dashboard designed for exploring the data and discovering promising game genres. Readers are encouraged to experiment with different combinations of tags and explore potential market opportunities.                                                                                                                                                                                                  
-**[Download the Interactive Power BI Dashboard ↓](https://github.com/Lezaleas/Steam-Subgenres/raw/refs/heads/main/Pictures/steam.pbix)**
+                                                                                                                                                                                           
+**[Interactive Power BI Dashboard ↓](https://github.com/Lezaleas/Steam-Subgenres/raw/refs/heads/main/Pictures/steam.pbix)**
 
 # 1. Trend Drivers
 
