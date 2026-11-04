@@ -39,6 +39,15 @@ The term was popularized by the following article: [What Are Crafty Buildy Strat
 
 # 3. AI Usage
 
+Comparing AI vs. Non-AI games in aggregate creates a misleading "sales penalty" because AI adoption is disproportionately concentrated among micro-budget, lower-tier indie projects with inherently smaller revenue ceilings. Over the 15-month study window, overall AI disclosures grew steadily from 16% to 19% of all analyzed releases.
+
+The relative sales gap narrows significantly as project size decreases. For smaller titles, the baseline difference in copies sold between AI and non-AI games is minimal to negligible.
+
+When isolated to indie studios, utilizing AI for graphical/art generation correlates with higher review scores compared to non-AI indie peers.
+This indicates that players are receptive to AI-generated visuals when it allows small teams to elevate production values and visual fidelity beyond their traditional resource constraints.
+
+Rather than suffering a blanket brand or sales penalty, indie developers can strategically leverage AI—particularly in graphical production—to bridge resource gaps without alienating players. Provided the core gameplay holds value, consumers demonstrate neutral sentiment toward AI-enhanced visual scope at the indie level.
+
 ![AI Disclosed](Pictures/AIUsagePBI.png)
 
 # 4. Methodology
