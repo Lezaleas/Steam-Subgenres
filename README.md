@@ -1,6 +1,6 @@
 <h1 align="center">Which Steam Subgenres Make the Most Money for Indie Studios?</h1>
 
-An Analysis of 150k Steam games to find where small studios can compete.                                                            
+An Analysis of 150k Steam games, web page text and gamalytics API to find where small studios can compete.                                                            
 **Key finding**: system-driven genres (Base Building, Resource Management, Deckbuilding) consistently outperform, because they reward mechanical depth over production budget.
                                                                                                                                                                                            
 **[Interactive Power BI Dashboard Download ↓](https://github.com/Lezaleas/Steam-Subgenres/raw/refs/heads/main/Pictures/steam.pbix)**
