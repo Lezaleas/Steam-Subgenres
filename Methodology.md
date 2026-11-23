@@ -24,7 +24,7 @@ The raw text of each disclosure was preserved to perform NLP classification via 
 Game-level genre taxonomies were integrated from a continuously updated Steam games dataset.
 This dataset captures daily snapshots of crowdsourced community tags and subgenre classifications associated with each title.
 
-# 3. Data Cleaning & Preprocessing
+# 3. Data Cleaning & Reconciliation 
 
 In the steam games dataset, titles with a price of $0 were excluded from the dataset, as free-to-play games utilize fundamentally distinct monetization models.
 
