@@ -26,6 +26,8 @@ This dataset captures daily snapshots of crowdsourced community tags and subgenr
 
 # 3. Data Cleaning & Reconciliation 
 
+Games were identified across all three datasets using their Steam IDs, which served as the common key for joining them. Games missing from any of the datasets were identified and excluded to ensure consistency across the merged data. Since the Gamalytic dataset was slightly outdated, all games released after June had to be excluded.
+
 In the steam games dataset, titles with a price of $0 were excluded from the dataset, as free-to-play games utilize fundamentally distinct monetization models.
 
 Due to inconsistent data types within the subgenre column—comprising both comma-separated values and JSON strings—all entries were standardized into uniform strings through the following query:
